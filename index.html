@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!---------------------HOME PAGE--------------------------->
+<!--------------------------------------------------------->
+
+    <section id="home-page">
+        <div class="container-fluid p-0">
+            <header class="d-lg-none bg-white border-bottom p-3 d-flex justify-content-between align-items-center sticky-top shadow-sm">
+                <span class="h4 mb-0 fw-bold text-primary" style="letter-spacing: -0.5px;">Mocko</span>
+                <button class="btn btn-outline-primary btn-sm border-2 rounded-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainSidebar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="homePage-list-icon"><path fill="currentColor" d="M40 48C26.7 48 16 58.7 16 72l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24L40 48zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L192 64zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zM16 232l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0z"/></svg>
+                </button>
+            </header>
+
+            <div class="row g-0">
+                <nav id="mainSidebar" class="col-lg-3 col-xl-2 bg-white border-end offcanvas-lg offcanvas-start sticky-lg-top" style="height: 100vh; overflow-y: auto;">
+                    <div class="offcanvas-header d-lg-none border-bottom bg-light">
+                        <h5 class="offcanvas-title fw-bold text-primary">Mocko</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#mainSidebar"></button>
+                    </div>
+
+                    <div class="p-4 d-flex flex-column h-100">
+                        <div class="d-none d-lg-block mb-4 ps-2">
+                            <span class="h3 fw-bold text-primary" style="letter-spacing: -0.5px;">Mocko</span>
+                        </div>
+
+                        <ul class="nav flex-column gap-1 mb-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active" onclick="loadContent('dashboard')">
+                                    <span class="d-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+                                        <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+                                        </svg>
+                                        <span>Dashboard</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" onclick="loadContent('account')">
+                                    <span class="d-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                        </svg>
+                                        <span>Account</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <div class="text-uppercase x-small text-muted fw-bold mt-4 mb-2 ps-2 pb-2 border-bottom border-light-subtle" style="font-size: 0.65rem; letter-spacing: 1.2px;">Main Library</div>
+
+                            <li class="nav-item">
+                                <a class="nav-link d-flex justify-content-between align-items-center rounded-3 px-3 py-2.5 transition-all collapsed" data-bs-toggle="collapse" href="#desktopSubjectMenu" role="button" aria-expanded="false" aria-controls="desktopSubjectMenu">
+                                    <span class="d-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="book-icon"><path fill="currentColor" d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z"/></svg>
+                                        <span>Subjects</span>
+                                    </span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="chevron-icon transition-transform"><path fill="currentColor" d="M297.4 470.6C309.9 483.1 330.2 483.1 342.7 470.6L534.7 278.6C547.2 266.1 547.2 245.8 534.7 233.3C522.2 220.8 501.9 220.8 489.4 233.3L320 402.7L150.6 233.4C138.1 220.9 117.8 220.9 105.3 233.4C92.8 245.9 92.8 266.2 105.3 278.7L297.3 470.7z"/></svg>
+                                </a>
+
+                                <div class="collapse" id="desktopSubjectMenu">
+                                    <ul class="nav flex-column ms-3 ps-3 border-start sub-menu-list vertical-line-style">
+                                        <li><a href="#" class="nav-link" onclick="loadContent('mathematics')">Mathematics</a></li>
+                                        <li><a href="#" class="nav-link" onclick="loadContent('geography')">Geography</a></li>
+                                        <li><a href="#" class="nav-link" onclick="loadContent('history')">History</a></li>
+                                        <li><a href="#" class="nav-link" onclick="loadContent('science')">General Science</a></li>
+                                        <li><a href="#" class="nav-link" onclick="loadContent('reasoning')">Reasoning</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" onclick="loadContent('myLibrary')">
+                                    <span class="d-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="layerGroup"><path fill="currentColor" d="M232.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 149.8C5.4 145.8 0 137.3 0 128s5.4-17.9 13.9-21.8L232.5 5.2zM48.1 218.4l164.3 75.9c27.7 12.8 59.6 12.8 87.3 0l164.3-75.9 34.1 15.8c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 277.8C5.4 273.8 0 265.3 0 256s5.4-17.9 13.9-21.8l34.1-15.8zM13.9 362.2l34.1-15.8 164.3 75.9c27.7 12.8 59.6 12.8 87.3 0l164.3-75.9 34.1 15.8c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 405.8C5.4 401.8 0 393.3 0 384s5.4-17.9 13.9-21.8z"/></svg>
+                                        <span>My Library</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" onclick="loadContent('leaderboard')">
+                                    <span class="d-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="trophy-icon"><path fill="currentColor" d="M208.3 64L432.3 64C458.8 64 480.4 85.8 479.4 112.2C479.2 117.5 479 122.8 478.7 128L528.3 128C554.4 128 577.4 149.6 575.4 177.8C567.9 281.5 514.9 338.5 457.4 368.3C441.6 376.5 425.5 382.6 410.2 387.1C390 415.7 369 430.8 352.3 438.9L352.3 512L416.3 512C434 512 448.3 526.3 448.3 544C448.3 561.7 434 576 416.3 576L224.3 576C206.6 576 192.3 561.7 192.3 544C192.3 526.3 206.6 512 224.3 512L288.3 512L288.3 438.9C272.3 431.2 252.4 416.9 233 390.6C214.6 385.8 194.6 378.5 175.1 367.5C121 337.2 72.2 280.1 65.2 177.6C63.3 149.5 86.2 127.9 112.3 127.9L161.9 127.9C161.6 122.7 161.4 117.5 161.2 112.1C160.2 85.6 181.8 63.9 208.3 63.9zM165.5 176L113.1 176C119.3 260.7 158.2 303.1 198.3 325.6C183.9 288.3 172 239.6 165.5 176zM444 320.8C484.5 297 521.1 254.7 527.3 176L475 176C468.8 236.9 457.6 284.2 444 320.8z"/></svg>
+                                        <span>Leaderboard</span>
+                                    </span> 
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div id="sidebar-ac" class="pt-4 border-top mt-auto" style="margin-left: auto; margin-right: auto;">
+                            <div id="sidebar-user-logged-in" class="d-none"></div>
+
+                            <button id="sidebar-btn-ac" class="btn btn-outline-primary btn-sm rounded-3 fw-bold py-1 px-3 d-flex justify-content-center align-items-center" onclick="loadContent('accounts')" style="font-size: 0.8rem;">
+                                Login / Sign In for Free
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f" class="ms-2"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg>
+                            </button> 
+                        </div>
+                    </div>
+                </nav>
+
+                <main class="col-lg-9 col-xl-10 bg-light vh-100 d-flex flex-column" style="overflow-y: auto;">
+                    <div class="row g-0 align-items-center bg-white border-bottom px-3 py-2 sticky-top">
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <div class="position-relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" class="search-icon position-absolute top-50 start-0 translate-middle-y ms-3"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                                <input type="search" id="global-search-bar" class="form-control search-input-custom rounded-3 ps-5" style="height: 38px; font-size: 0.85rem;" placeholder="Search tests, chapters, or topics..." oninput="handleGlobalSearch(this.value)">
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-7 col-lg-8 py-1 d-flex align-items-center justify-content-end gap-3">
+                            <button class="btn btn-light border position-relative rounded-circle p-0 d-flex align-items-center justify-content-center shadow-none border-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 640 640" class="bell-icon text-secondary"><path fill="currentColor" d="M320 64C306.7 64 296 74.7 296 88L296 97.7C214.6 109.3 152 179.4 152 264L152 278.5C152 316.2 142 353.2 123 385.8L101.1 423.2C97.8 429 96 435.5 96 442.2C96 463.1 112.9 480 133.8 480L506.2 480C527.1 480 544 463.1 544 442.2C544 435.5 542.2 428.9 538.9 423.2L517 385.7C498 353.1 488 316.1 488 278.4L488 263.9C488 179.3 425.4 109.2 344 97.6L344 87.9C344 74.6 333.3 63.9 320 63.9zM488.4 432L151.5 432L164.4 409.9C187.7 370 200 324.6 200 278.5L200 264C200 197.7 253.7 144 320 144C386.3 144 440 197.7 440 264L440 278.5C440 324.7 452.3 370 475.5 409.9L488.4 432zM252.1 528C262 556 288.7 576 320 576C351.3 576 378 556 387.9 528L252.1 528z"/></svg>
+                                <span class="position-absolute top-1 start-75 translate-middle p-1 bg-danger border border-light rounded-circle notification-dot"></span>
+                            </button>
+
+                            <div id="topbar-ac" class="homePage-create-btn">
+                                <div id="topbar-user-logged-in" class="d-none ms-3"></div>
+
+                                <button id="topbar-btn-ac" class="btn btn-primary btn-sm rounded-pill fw-bold py-2 px-3 ms-3" onclick="loadContent('accounts')" style="font-size: 0.8rem;">
+                                    Create Account
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div id="dynamic-content">
+                        <!---Content will be loading here using js-->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+<!---------------------------------------------------------->
+
+<!-------------------INSTRUCTIONS PAGE---------------------->
+<!---------------------------------------------------------->
+
+    <section id="instructions-page">
+        <div id="instructions-container">
+            <div id="instructions-template">
+                <div class="animate__animated animate__fadeIn p-3 p-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="bg-primary p-4 text-white">
+                            <h3 class="fw-bold mb-0">Read Instructions</h3>
+                            <p class="mb-0 opacity-75">Please read the following instructions carefully before starting.</p>
+                        </div>
+
+                        <div class="card-body p-4 p-md-5">
+                            <div class="instructions-content text-muted mb-4" style="font-size: 0.95rem;">
+                        
+                                <div class="row align-items-center">
+                                    <div class="col-lg-7">
+                                        <h4 class="text-dark fw-bold mb-5" id="instr-test-title">Subject:</h4>
+                                        <h5 class="text-dark fw-bold mb-3">Standard Rules:</h5>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2 d-flex">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="clock-icon me-2"><path fill="currentColor" d="M528 320C528 434.9 434.9 528 320 528C205.1 528 112 434.9 112 320C112 205.1 205.1 112 320 112C434.9 112 528 205.1 528 320zM64 320C64 461.4 178.6 576 320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z"/></svg> Total Duration: <span id="instr-duration" class="fw-bold text-dark ms-2 me-1">180</span> Minutes
+                                            </li>
+                                            <li class="mb-2 d-flex">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="question-icon me-2"><path fill="currentColor" d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm0-336c-17.7 0-32 14.3-32 32 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-44.2 35.8-80 80-80s80 35.8 80 80c0 47.2-36 67.2-56 74.5l0 3.8c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-8.1c0-20.5 14.8-35.2 30.1-40.2 6.4-2.1 13.2-5.5 18.2-10.3 4.3-4.2 7.7-10 7.7-19.6 0-17.7-14.3-32-32-32zM224 368a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg> Total Questions: <span id="instr-q-count" class="fw-bold text-dark ms-2">0</span>
+                                            </li>
+                                            <li class="mb-2 d-flex">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="instr-award-icon me-2"><path fill="currentColor" d="M245.9-25.9c-13.4-8.2-30.3-8.2-43.7 0-24.4 14.9-39.5 18.9-68.1 18.3-15.7-.4-30.3 8.1-37.9 21.9-13.7 25.1-24.8 36.2-49.9 49.9-13.8 7.5-22.2 22.2-21.9 37.9 .7 28.6-3.4 43.7-18.3 68.1-8.2 13.4-8.2 30.3 0 43.7 14.9 24.4 18.9 39.5 18.3 68.1-.4 15.7 8.1 30.3 21.9 37.9 22.1 12.1 33.3 22.1 45.1 41.5L42.7 458.5c-5.9 11.9-1.1 26.3 10.7 32.2l86 43c11.5 5.7 25.5 1.4 31.7-9.8l52.8-95.1 52.8 95.1c6.2 11.2 20.2 15.6 31.7 9.8l86-43c11.9-5.9 16.7-20.3 10.7-32.2l-48.6-97.2c11.7-19.4 23-29.4 45.1-41.5 13.8-7.5 22.2-22.2 21.9-37.9-.7-28.6 3.4-43.7 18.3-68.1 8.2-13.4 8.2-30.3 0-43.7-14.9-24.4-18.9-39.5-18.3-68.1 .4-15.7-8.1-30.3-21.9-37.9-25.1-13.7-36.2-24.8-49.9-49.9-7.5-13.8-22.2-22.2-37.9-21.9-28.6 .7-43.7-3.4-68.1-18.3zM224 96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
+                                                Full marks: <span id="instr-total-marks" class="fw-bold text-dark ms-1">0</span>
+                                            </li>
+                                            <li class="mb-2 d-flex">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="instr-list-check-icon me-2"><path fill="currentColor" d="M133.8 36.3c10.9 7.6 13.5 22.6 5.9 33.4l-56 80c-4.1 5.8-10.5 9.5-17.6 10.1S52 158 47 153L7 113C-2.3 103.6-2.3 88.4 7 79S31.6 69.7 41 79l19.8 19.8 39.6-56.6c7.6-10.9 22.6-13.5 33.4-5.9zm0 160c10.9 7.6 13.5 22.6 5.9 33.4l-56 80c-4.1 5.8-10.5 9.5-17.6 10.1S52 318 47 313L7 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l19.8 19.8 39.6-56.6c7.6-10.9 22.6-13.5 33.4-5.9zM224 96c0-17.7 14.3-32 32-32l224 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-224 0c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32l224 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-224 0c-17.7 0-32-14.3-32-32zM160 416c0-17.7 14.3-32 32-32l288 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-288 0c-17.7 0-32-14.3-32-32zM64 376a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/></svg>
+                                                Answer <strong class="ms-1 me-1"> all </strong> the questions.
+                                            </li>
+                                            <li class="mb-2 d-flex">
+                                                📌 Questions are of equal value.
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-5 text-center d-lg-block">
+                                        <img src="images/Online test-bro.png" alt="Exam Illustration" class="img-fluid" style="max-height: 250px;">
+                                    </div>
+                                </div>
+                        
+
+                                <h5 class="text-dark fw-bold mb-3 mt-4">1. Overall Exam Interface</h5>
+                                <div class="card border rounded-2 overflow-hidden mb-5 shadow-sm">
+                            
+                                    <img src="images/Screenshot 2026-06-02 113648.png" alt="Full Exam Interface" class="img-fluid w-100">
+                                </div>
+
+                                <h5 class="text-dark fw-bold mb-3">General Information:</h5>
+                                <ol class="ps-3 mb-4">
+                                    <li class="mb-2">The clock will be set at the server. The countdown timer at the top right corner of the screen will display the remaining time.</li>
+                                    <li class="mb-2">The Question Palette displayed on the right side of the screen will show the status of each question using color codes.</li>
+                                    <li class="mb-2">To answer a question, click on the question number in the Question Palette.</li>
+                                    <li class="mb-2">You can click on <strong>Save & Next</strong> to save your answer for the current question and then go to the next.</li>
+                                </ol>
+
+                                <div class="p-3 bg-light rounded-3 border-start border-4 border-primary">
+                                    <p class="small mb-0"><strong>Note:</strong> Closing the browser or refreshing the page will not submit your exam, but you may lose progress if the session expires.</p>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center my-4">
+                                <h5 class="fw-bold mb-3 text-start">2. Question Palette Legend</h5>
+                                <div class="col-lg-6 col-md-8 text-center">
+                            
+                                    <img src="images/Screenshot 2026-06-02 114400.png" class="img-fluid rounded border shadow-sm" alt="Legend Status">
+                                    <p class="small text-muted mt-2">Refer to these colors to track your progress.</p>
+                                </div>
+                                <p>The question palette on the right side of your screen will display the following visual anchors:</p>
+                                <ol class="ps-3 mb-4">
+                                    <li class="mb-2">White: You have not visited the question yet.</li>
+                                    <li class="mb-2">Red: You have visited the question but have not answered it.</li>
+                                    <li class="mb-2">Green: You have answered the question.</li>
+                                </ol>
+                            </div>
+
+                            <div class="row justify-content-center my-4">
+                                <h5 class="fw-bold mb-3 text-start">3. Submitting Responses</h5>
+                                <ol class="ps-3 mb-4">
+                                    <li class="mb-2">To Answer: Click on the radio button next to your desired option.</li>
+                                    <li class="mb-2">To Save: You MUST click the "Save & Next" button to save your response before moving to another question. Simply clicking an option without saving will clear your choice.</li>
+                                    <li class="mb-2">To Clear: Click the "Clear Response" button if you wish to deselect your chosen answer.</li>
+                                    <li class="mb-2">Final Submission: The exam will automatically submit when the timer reaches zero. You can also click the "Submit" button to submit your exam, however we recommend you to stay for full time.</li>
+                                </ol>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <div class="form-check mb-4 custom-checkbox">
+                                <input class="form-check-input ms-0 me-3" type="checkbox" id="confirmInstructions">
+                                <label class="form-check-label fw-bold text-dark cursor-pointer" for="confirmInstructions">
+                                    I have read and understood the instructions. All computer hardware allotted to me are in proper working condition.
+                                </label>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button class="btn btn-outline-secondary px-4 py-2 rounded-pill" id="instr-back-btn">Cancel</button>
+                                <button class="btn btn-primary px-5 py-2 rounded-pill instr-ready-btn" id="proceedBtn" disabled onclick="confirmAndStart()">I am ready to begin</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!---------------------------------------------------------->
+
+<!------------------------EXAM AREA------------------------->
+<!---------------------------------------------------------->
+
+    <section class="exam-area hidden" id="quiz-page">
+        <!---------------HEADER---------------->
+        <div class="quiz-header d-flex justify-content-between align-items-center px-3">
+            <div class="d-flex align-items-center">
+                <img src="images/mocko-logo-copy.png" alt="Logo" class="logo me-2">
+                <div class="header-divider me-3 d-none d-sm-block"></div>
+                <h5 class="mb-0 fw-bold d-none d-sm-inline-block" id="header-title">Math Exam - Mock Test 1</h5>
+            </div>
+            <div class="d-flex align-items-center">
+                <span class="me-3 d-none d-md-inline small opacity-75">
+                    <span id="current-date">14 May 2026</span> | <span id="current-time" class="fw-bold">12:00 PM</span>
+                </span>
+                <!----3 DOTS BUTTON-->
+                <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMobile">
+                    <span style="color: white; font-weight: bold; font-size: 1.5rem;" class="dots-3">&#9776</span> 
+                </button>
+            </div> 
+        </div>
+
+        <div class="container-fluid main-wrapper">
+        
+            <div class="row">
+                <!------MAIN CONTENT-->
+                <div class="col-12 col-lg-8 d-flex flex-column p-2 quiz-container">
+                    <!-----TIMER SECTION-->
+                    <div class="quiz-section mb-2 px-3 py-2 bg-white border rounded-4 shadow-sm d-flex align-items-center justify-content-between">
+                        <!-----------LEFT SIDE------------->
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="bg-light p-2 rounded-circle d-inline-flex align-items-center justify-content-center border border-light-subtle shadow-sm quiz-icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="hourGlass-icon text-primary"><path fill="currentColor" d="M32 0C14.3 0 0 14.3 0 32S14.3 64 32 64l0 11c0 42.4 16.9 83.1 46.9 113.1l67.9 67.9-67.9 67.9C48.9 353.9 32 394.6 32 437l0 11c-17.7 0-32 14.3-32 32s14.3 32 32 32l320 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-11c0-42.4-16.9-83.1-46.9-113.1l-67.9-67.9 67.9-67.9c30-30 46.9-70.7 46.9-113.1l0-11c17.7 0 32-14.3 32-32S369.7 0 352 0L32 0zM288 437l0 11-192 0 0-11c0-25.5 10.1-49.9 28.1-67.9l67.9-67.9 67.9 67.9c18 18 28.1 42.4 28.1 67.9z"/></svg>
+                            </div>
+                            <div>
+                                <div class="text-muted small fw-bold text-uppercase" style="font-size: 0.7rem; letter-spacing: 1px;">Total Duration</div>
+                                <div class="fw-bold fs-5 lh-1">
+                                    <span id="quizPage-totalTime-display">0</span>
+                                    <span class="text-muted fs-6 fw-normal">Min</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!---------RIGHT SIDE--------------->
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="text-secondary small text-uppercase fw-bold tracking-wider lh-1 text-end" style="letter-spacing: 0.5px;">
+                                Time<br>Left
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="text-center">
+                                    <div class="bg-dark text-white rounded-3 shadow-sm border border-secondary time-box">
+                                        <span id="timer-hrs">00</span>
+                                    </div>
+                                </div>
+
+                                <div class="fs-4 fw-bold text-secondary mb-3">:</div>
+
+                                <div class="text-center">
+                                    <div class="bg-dark text-white rounded-3 fw-black shadow-sm border border-secondary time-box">
+                                        <span id="timer-min">00</span>
+                                    </div>
+                                </div>
+
+                                <div class="fs-4 fw-bold text-secondary mb-3">:</div>
+
+                                <div class="text-center">
+                                    <div class="bg-dark text-white rounded-3 fw-black shadow-sm border border-secondary time-box">
+                                        <span id="timer-sec">00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--------------MARKS----------------->
+                    <div class="quiz-section mb-2 px-3 py-2 bg-white border rounded-4 shadow-sm d-flex align-items-center gap-3">
+                        <div class="bg-light p-2 rounded-circle d-inline-flex align-items-center justify-content-center border border-light-subtle shadow-sm quiz-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="award-icon text-success"><path fill="currentColor" d="M245.9-25.9c-13.4-8.2-30.3-8.2-43.7 0-24.4 14.9-39.5 18.9-68.1 18.3-15.7-.4-30.3 8.1-37.9 21.9-13.7 25.1-24.8 36.2-49.9 49.9-13.8 7.5-22.2 22.2-21.9 37.9 .7 28.6-3.4 43.7-18.3 68.1-8.2 13.4-8.2 30.3 0 43.7 14.9 24.4 18.9 39.5 18.3 68.1-.4 15.7 8.1 30.3 21.9 37.9 22.1 12.1 33.3 22.1 45.1 41.5L42.7 458.5c-5.9 11.9-1.1 26.3 10.7 32.2l86 43c11.5 5.7 25.5 1.4 31.7-9.8l52.8-95.1 52.8 95.1c6.2 11.2 20.2 15.6 31.7 9.8l86-43c11.9-5.9 16.7-20.3 10.7-32.2l-48.6-97.2c11.7-19.4 23-29.4 45.1-41.5 13.8-7.5 22.2-22.2 21.9-37.9-.7-28.6 3.4-43.7 18.3-68.1 8.2-13.4 8.2-30.3 0-43.7-14.9-24.4-18.9-39.5-18.3-68.1 .4-15.7-8.1-30.3-21.9-37.9-25.1-13.7-36.2-24.8-49.9-49.9-7.5-13.8-22.2-22.2-37.9-21.9-28.6 .7-43.7-3.4-68.1-18.3zM224 96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
+                        </div>
+                        <div>
+                            <div class="text-muted small fw-bold text-uppercase" style="font-size: 0.7rem; letter-spacing: 1px;">Total Weightage</div>
+                            <div class="fw-bold fs-5 lh-1">
+                                <span id="quizPage-totalMarks-display">0</span>
+                                <span class="text-muted fs-6 fw-normal">Points</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-section bg-white border rounded-4 shadow-sm p-4 d-flex flex-column question-section">
+                        <div class="d-flex align-items-center justify-content-between border-bottom pb-3 mb-3">
+                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill fw-bold fs-6 quiz-question-number-div">
+                                <span class="question-number-section">Question <span id="question-number">100</span>/<span id="total-questions">100</span></span>
+                            </span>
+                            <small class="text-muted fw-semibold quiz-opt-instr">Select the single best answer</small>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="question-card">
+                                <h5 id="question-text" class="fw-bold text-dark lh-base" style="letter-spacing: -0.3px;">
+                                    Question is loading...
+                                </h5>
+                            </div>
+                            
+                        </div>
+
+                        <div id="options-container" class="d-flex flex-column gap-2 pe-1">
+                            Options are loading here...
+                        </div>
+                    </div>
+                </div>
+            
+                <!------------SIDEBAR------------>
+                <div class="col-lg-4 d-none d-lg-flex flex-column sidebar-bg p-2 quiz-sidebar-total">
+                    <div class="sidebar-section">
+                        <div class="row align-items-center g-0">
+                            <div class="col-auto me-3">
+                                <div class="profile-img">
+                                    <img src="images/photo.jpg" alt="Profile pic">
+                                </div>
+                            </div>
+                            <div class="col" id="user-profile-info-desktop">
+                                <h6 class="mb-0 fw-bold">Guest Student</h6>
+                                <p class="mb-0 small text-muted">Please log in/p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h6 class="small fw-bold mb-3 border-bottom pb-2">Status Legend</h6>
+                        <div class="row g-2">
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="q-btn status-not-visited" id="not-visited">13</div>
+                                <span class="small">Not Visited</span>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="q-btn status-not-attempted text-white" id="not-attempted">1</div>
+                                <span class="small"> Not Attempted</span> 
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="q-btn status-attempted text-white" id="attempted">1</div>
+                                <span class="small"> Attempted</span> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section flex-grow-1">
+                        <h6 class="small fw-bold mb-3 border-bottom pb-2">Question Palette</h6>
+                        <div class="palette-container">
+                            <div class="d-flex flex-wrap" id="questionPalette">
+                                <!---Question buttons here--->
+                                
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------FOOTER-------->
+        <footer class="row g-0 quiz-footer align-items-center">
+            <div class="col-lg-8 d-none d-lg-flex justify-content-between px-4">
+                <button class="btn btn-outline-secondary btn-sm rounded-pill px-4" onclick="clearResponse()">Clear Response</button>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-secondary rounded-pill px-4" onclick="prevQuestion()">Previous</button>
+                    <button class="btn btn-primary rounded-pill px-4 shadow-sm fw-bold" onclick="nextQuestion()">Save & Next</button>
+                </div>
+            </div>
+
+            <div class="col-lg-4 d-none d-lg-flex justify-content-end px-4 footer-sidebar-zone gap-2">
+                <button class="btn btn-danger btn-sm rounded-pill px-4 disabled" disabled>Cancel Exam</button>
+                <button class="btn btn-primary rounded-pill px-4 shadow-sm fw-bold" onclick="handleManualSubmitClick()">Submit Exam</button>
+            </div>
+
+            <div class="col-12 d-lg-none d-flex justify-content-between px-3">
+                <button class="btn btn-outline-dark btn-sm" onclick="clearResponse()">Clear Response</button>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-secondary btn-sm" onclick="prevQuestion()">Prev</button>
+                    <button class="btn btn-primary btn-sm" onclick="nextQuestion()">Save & Next</button>
+                </div>
+            </div>
+        </footer>
+
+        <!------OFFCANVAS (MOBILE) SIDEBAR------->
+        <div class="offcanvas offcanvas-end sidebar-bg" tabindex="-1" id="sidebarMobile" style="background-color: #eef4f7;">
+            <div class="offcanvas-header border-bottom bg-white">
+                <h5 class="offcanvas-title fw-bold">Exam Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="sidebar-section bg-white">
+                    <div class="row align-items-center g-0">
+                        <div class="col-auto me-3">
+                            <div class="profile-img">
+                                <img src="images/photo.jpg" alt="Profile pic">
+                            </div>
+                        </div>
+                        <div class="col" id="user-profile-info-mobile">
+                            <h6 class="mb-0 fw-bold">Guest Student</h6>
+                            <p class="mb-0 small text-muted">Please log in</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section bg-white">
+                    <h6 class="small fw-bold mb-3 border-bottom pb-2">Status Legend</h6>
+                    <div class="row g-2">
+                        <div class="col-6 d-flex align-items-center">
+                            <div class="q-btn me-2"><span class="not-visited-count">13</span></div> <span class="small">Not Visited</span>
+                        </div>
+                        <div class="col-6 d-flex align-items-center">
+                            <div class="q-btn status-not-attempted text-white me-2"><span class="not-attempted-count">1</span></div> <span class="small">Not Attempted</span>
+                        </div>
+                        <div class="col-6 d-flex align-items-center">
+                            <div class="q-btn status-attempted text-white me-2"><span class="attempted-count">1</span></div> <span class="small">Attempted</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section bg-white">
+                    <h6 class="small fw-bold mb-3 border-bottom pb-2">Question Palette</h6>
+                    <div class="palette-container" style="max-height: none;">
+                        <div class="d-flex flex-wrap" id="questionPaletteMobile">
+                            <!----Question buttons---->
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-auto pt-3 border-top d-flex gap-2">
+                    <button class="btn btn-primary w-100 py-2 fw-bold" onclick="handleManualSubmitClick()">Submit Exam</button>
+                    <button class="btn btn-danger w-100 py-2 disabled" disabled>Cancel</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--------------------------------------------------------->
+
+<!-------------------TIMES UP OVERLAY----------------------->
+<!---------------------------------------------------------->
+    <div id="times-up-overlay" class="d-none position-fixed top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center" style="background: rgba(255, 255, 255, 0.88); z-index: 9999; backdrop-filter: blur(5px);">
+        <div class="text-center p-5 bg-white shadow-lg rounded-4 border animate-zoom-in" style="max-width: 440px;">
+            <div class="mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="clock-icon text-danger animate-shake"><path fill="currentColor" d="M256 0a256 256 0 1 1 0 512 256 256 0 1 1 0-512zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+            </div>
+            <h2 class="fw-black text-danger mb-2" style="letter-spacing: -0.5px;">Time's Up!</h2>
+            <p class="text-muted fs-6 mb-0">Your allotted exam duration has expired. Securing your workspace and compiling answers...</p>
+        </div>
+    </div>
+<!---------------------------------------------------------->
+
+<!-------------------EXAM REPORT PAGE----------------------->
+<!---------------------------------------------------------->
+    <div class="container-fluid min-vh-100 bg-light py-5" id="report-page" style="display: none;">
+        <div class="card border-0 shadow-sm rounded-4 p-4 text-center bg-white" style="max-width: 800px; margin: 0 auto;">
+            <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-light">
+                <h2 class="fw-bold text-secondary mb-0">Exam Report</h2>
+                <div class="text-end">
+                    <span id="report-status" class="fw-semibold fs-4 text-primary">Processing...</span>
+                    <div class="text-muted small fw-medium" id="report-final-score"><span id="header-your-marks">0</span>/<span id="header-total-marks">0</span></div>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center align-items-center my-3">
+                <div class="col-6 col-md-4">
+                    <div class="text-muted mb-2 small uppercase fw-bold tracking-wider">Accuracy</div>
+                    <div class="progress-circle mx-auto" id="circle-accuracy" style="--value: 0%;">
+                        <span class="circle-inner" id="text-accuracy">0%</span>
+                    </div>
+                </div>
+                <div class="col-8 col-md-4">
+                    <div class="text-muted mb-2 small uppercase fw-bold tracking-wider">Score</div>
+                    <div class="progress-circle main-score mx-auto" id="circle-score" style="--value: 0%;">
+                        <span class="circle-inner fs-3 fw-bold" id="text-score">0%</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="text-muted mb-2 small uppercase fw-bold tracking-wider">Attempted</div>
+                    <div class="progress-circle mx-auto" id="circle-attempted" style="--value: 0%;">
+                        <span class="circle-inner" id="text-attempted">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 my-4" id="report-stats-grid">
+                <div class="col-12 col-md-4">
+                    <div class="p-3 bg-white rounded-3 border border-light shadow-sm d-flex justify-content-between align-items-center border-start border-success border-1">
+                        <div class="d-flex align-items-center">
+                            <div class="correct-box"></div>
+                            <div class="text-muted fw-medium">Correct:</div>
+                        </div>
+                        <span class="fs-5 fw-bold text-success" id="stat-correct">0</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="p-3 bg-white rounded-3 border border-light shadow-sm d-flex justify-content-between align-items-center border-start border-danger border-1">
+                        <div class="d-flex align-items-center">
+                            <div class="incorrect-box"></div>
+                            <div class="text-muted fw-medium">Incorrect:</div>
+                        </div>
+                        <span class="fs-5 fw-bold text-danger" id="stat-incorrect">0</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="p-3 bg-white rounded-3 border border-light shadow-sm d-flex justify-content-between align-items-center border-start border-secondary border-1">
+                        <div class="d-flex align-items-center">
+                            <div class="skipped-box"></div>
+                            <div class="text-muted fw-medium">Skipped:</div>
+                        </div>
+                        <span class="fs-5 fw-bold text-secondary" id="stat-skipped">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between text-muted small px-2 pt-2 border-top border-light" id="report-footer-meta">
+                
+                <div class="d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="list-icon"><path fill="currentColor" d="M0 72C0 58.8 10.7 48 24 48l48 0c13.3 0 24 10.7 24 24l0 104 24 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-96 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l24 0 0-80-24 0C10.7 96 0 85.3 0 72zM30.4 301.2C41.8 292.6 55.7 288 70 288l4.9 0c33.7 0 61.1 27.4 61.1 61.1 0 19.6-9.4 37.9-25.2 49.4l-24 17.5 33.2 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-90.7 0C13.1 464 0 450.9 0 434.7 0 425.3 4.5 416.5 12.1 411l70.5-51.3c3.4-2.5 5.4-6.4 5.4-10.6 0-7.2-5.9-13.1-13.1-13.1L70 336c-3.9 0-7.7 1.3-10.8 3.6L38.4 355.2c-10.6 8-25.6 5.8-33.6-4.8S-1 324.8 9.6 316.8l20.8-15.6zM224 64l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 160l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 160l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg> TOTAL QUESTIONS:
+                    <span class="fw-bold text-dark ms-1" id="meta-total-q">0</span>
+                </div>
+                    
+                <div class="d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="totalMarks-icon"><path fill="currentColor" d="M144.3 0l224 0c26.5 0 48.1 21.8 47.1 48.2-.2 5.3-.4 10.6-.7 15.8l49.6 0c26.1 0 49.1 21.6 47.1 49.8-7.5 103.7-60.5 160.7-118 190.5-15.8 8.2-31.9 14.3-47.2 18.8-20.2 28.6-41.2 43.7-57.9 51.8l0 73.1 64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0 0-73.1c-16-7.7-35.9-22-55.3-48.3-18.4-4.8-38.4-12.1-57.9-23.1-54.1-30.3-102.9-87.4-109.9-189.9-1.9-28.1 21-49.7 47.1-49.7l49.6 0c-.3-5.2-.5-10.4-.7-15.8-1-26.5 20.6-48.2 47.1-48.2zM101.5 112l-52.4 0c6.2 84.7 45.1 127.1 85.2 149.6-14.4-37.3-26.3-86-32.8-149.6zM380 256.8c40.5-23.8 77.1-66.1 83.3-144.8L411 112c-6.2 60.9-17.4 108.2-31 144.8z"/></svg>
+                    TOTAL MARKS: 
+                    <span class="fw-bold text-dark ms-1" id="meta-total-marks">0</span>
+                </div>
+                <div class="d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="medal-icon"><path fill="currentColor" d="M224.3 128L139.7-12.9c-6.5-10.8-20.1-14.7-31.3-9.1L21.8 21.3C9.9 27.2 5.1 41.6 11 53.5L80.6 192.6c-30.1 33.9-48.3 78.5-48.3 127.4 0 106 86 192 192 192s192-86 192-192c0-48.9-18.3-93.5-48.3-127.4L437.6 53.5c5.9-11.9 1.1-26.3-10.7-32.2L340.2-22.1c-11.2-5.6-24.9-1.6-31.3 9.1L224.3 128zm30.8 142.5c1.4 2.8 4 4.7 7 5.1l50.1 7.3c7.7 1.1 10.7 10.5 5.2 16l-36.3 35.4c-2.2 2.2-3.2 5.2-2.7 8.3l8.6 49.9c1.3 7.6-6.7 13.5-13.6 9.9l-44.8-23.6c-2.7-1.4-6-1.4-8.7 0l-44.8 23.6c-6.9 3.6-14.9-2.2-13.6-9.9l8.6-49.9c.5-3-.5-6.1-2.7-8.3l-36.3-35.4c-5.6-5.4-2.5-14.8 5.2-16l50.1-7.3c3-.4 5.7-2.4 7-5.1l22.4-45.4c3.4-7 13.3-7 16.8 0l22.4 45.4z"/></svg>
+                    YOUR MARKS: 
+                    <span class="fw-bold text-dark ms-1" id="meta-your-marks">0</span>
+                </div>
+            </div>
+
+            <div id="report-feedback-box" class="p-3 rounded-3 my-4 border text-center transition-all">
+                <h5 id="feedback-title" class="fw-bold mb-1"></h5>
+                <p id="feedback-message" class="mb-0 text-muted small"></p>
+            </div>
+
+            <div class="row g-2 justify-content-center pt-2" id="report-action-buttons">
+                <div class="col-6 col-sm-4 col-md-3">
+                    <button class="btn btn-outline-secondary w-100 py-2 fw-semibold rounded-3 d-flex justify-content-center align-items-center" onclick="navigateToHome()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="home-icon"><path fill="currentColor" d="M240 6.1c9.1-8.2 22.9-8.2 32 0l232 208c9.9 8.8 10.7 24 1.8 33.9s-24 10.7-33.9 1.8l-8-7.2 0 205.3c0 35.3-28.7 64-64 64l-288 0c-35.3 0-64-28.7-64-64l0-205.3-8 7.2c-9.9 8.8-25 8-33.9-1.8s-8-25 1.8-33.9L240 6.1zm16 50.1L96 199.7 96 448c0 8.8 7.2 16 16 16l48 0 0-104c0-39.8 32.2-72 72-72l48 0c39.8 0 72 32.2 72 72l0 104 48 0c8.8 0 16-7.2 16-16l0-248.3-160-143.4zM208 464l96 0 0-104c0-13.3-10.7-24-24-24l-48 0c-13.3 0-24 10.7-24 24l0 104z"/></svg> Home
+                    </button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                    <button class="btn btn-outline-primary w-100 py-2 fw-semibold rounded-3" onclick="previewAnswers()">
+                        Preview
+                    </button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                    <button class="btn btn-success w-100 py-2 fw-semibold rounded-3" onclick="navigateToContinue()">
+                        Continue <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="arrowR-icon"><path fill="currentColor" d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-------------------------------------------------------->
+
+<!------------------SUBMIT WARNING PAGE------------------->
+<!-------------------------------------------------------->
+    <div class="modal fade" id="submitConfirmModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="submitModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow rounded-4">
+                <div class="modal-body text-center p-4">
+                    <div class="text-warning mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="warning-icon"><path fill="currentColor" d="M256 0c14.7 0 28.2 8.1 35.2 21l216 400c6.7 12.4 6.4 27.4-.8 39.5S486.1 480 472 480L40 480c-14.1 0-27.2-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9 20.5-21 35.2-21zm0 352a32 32 0 1 0 0 64 32 32 0 1 0 0-64zm0-192c-18.2 0-32.7 15.5-31.4 33.7l7.4 104c.9 12.5 11.4 22.3 23.9 22.3 12.6 0 23-9.7 23.9-22.3l7.4-104c1.3-18.2-13.1-33.7-31.4-33.7z"/></svg>
+                    </div>
+                    <h4 class="fw-bold text-dark mb-2" id="submitModalLabel">Are you sure you want to submit?</h4>
+                    <p class="text-muted small px-3">You will not be able to change your answers or undo this action once submitted.</p>
+
+                    <div class="d-flex justify-content-center gap-2 mt-5">
+                        <button type="button" class="btn btn-primary px-4 py-2 fw-semibold rounded-3" data-bs-dismiss="modal">No, Keep Writing</button>
+                        <button type="button" class="btn btn-outline-secondary px-4 py-2 fw-semibold rounded-3" onclick="confirmManualSubmit()">Yes, Submit Exam</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--------------------------------------------------------->
+
+<!---------------------LOADING PAGE------------------------>
+<!--------------------------------------------------------->
+    <div id="suspense-screen" class="d-none min-vh-100 d-flex flex-column justify-content-center align-items-center bg-light text-center">
+        <div class="spinner-border border-0 mb-4 text-primary" role="status" style="animation-duration: 1s;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="spinner-icon"><path fill="currentColor" d="M208 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm0 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM48 208a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm368 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM75 369.1A48 48 0 1 1 142.9 437 48 48 0 1 1 75 369.1zM75 75A48 48 0 1 1 142.9 142.9 48 48 0 1 1 75 75zM437 369.1A48 48 0 1 1 369.1 437 48 48 0 1 1 437 369.1z"/></svg>
+        </div>
+        <h4 class="fw-bold text-dark mb-1">Evaluating Your Performance...</h4>
+        <p class="text-muted small">Stay tight, this shouldn't take long.</p>
+    </div>
+<!-------------------------------------------------------->
+
+<!-----------------------REVIEW PAGE---------------------->
+<!-------------------------------------------------------->
+    <section id="review-page" class="container-fluid py-4 d-none" style="background: #f8f9fa; min-height: 100vh;">
+        <!---------------Header------------------>
+        <div class="container mb-4">
+            <div class="card shadow-sm border-0 bg-primary text-white p-4 rounded-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="text-uppercase mb-1" style="opacity: 0.8; letter-spacing: 1px;">Review Card</h5>
+                        <h2 id="review-subject-title" class="fw-bold mb-0"></h2>
+                        <p id="review-chapter-title" class="mb-0"></p>
+                    </div>
+                    <button class="btn btn-light rounded-pill px-4 fw-bold" onclick="exitReviewPage()">
+                        Back to Report Card &rarr;
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!----------------Scrolling Question list------------->
+        <div class="container">
+            <div id="review-questions-container" class="d-flex flex-column gap-4">
+                <!--Questions will be injected here using js-->
+            </div>
+
+            <!------------Footer Button------------>
+            <div class="text-center mt-5 mb-5">
+                <button class="btn btn-dark btn-lg rounded-pill px-5 shadow" onclick="exitReviewPage()">
+                    Back to Report Card
+                </button>
+            </div>
+        </div>
+    </section>
+<!--------------------------------------------------------->
+    
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="quizData.js"></script>
+    <script src="pageContent.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
